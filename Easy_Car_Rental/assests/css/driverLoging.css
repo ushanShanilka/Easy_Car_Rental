@@ -1,0 +1,96 @@
+body{
+    padding: 0;
+    margin: 0;
+    font-family: "Rajdhani Medium";
+}
+.hero{
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0, 0, 0, 0.3)),url("../img/Nature.jpg");
+    background-position: center;
+    background-size: cover;
+    overflow-x: hidden;
+    position: relative;
+}
+.back{
+    margin: auto;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+    border: 2px solid white;
+    padding: 5px;
+    color: white;
+    font-weight: bolder;
+}
+.main{
+    width: 500px;
+    height: 500px;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    opacity: 90%;
+    border-radius: 10px;
+    position: absolute;
+}
+.main h1{
+    text-align: center;
+    top: 100px;
+    padding-top: 50px;
+    font-weight: bolder;
+}
+.main input{
+    width: 250px;
+    height: 25px;
+    display: block;
+    border-radius: 5px;
+}
+.logBox{
+    position: absolute;
+    top: 35%;
+    margin-left: 125px;
+}
+.driverID{
+    margin-bottom: 25px;
+}
+.password{
+    margin-bottom: 25px;
+}
+.btnLogin{
+    width: 260px;
+    height: 35px;
+    color: white;
+    background-color: #0652DD;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.createAccount{
+    margin: auto;
+    color: #0b5ed7;
+    position: relative;
+    font-size: 15px;
+    top: 10px;
+    left: 60px;
+    cursor: pointer;
+}
+.rejBox{
+    position: absolute;
+    top: 10%;
+    margin-left: 125px;
+}
+.main2{
+    width: 500px;
+    height: 850px;
+    margin: auto;
+    bottom: -225px;
+    left: 0;
+    right: 0;
+    background-color: white;
+    position: absolute;
+}
+.title{
+    text-align: center;
+}

@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customer_Page</title>
+    <link rel="stylesheet" href="assests/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assests/css/createNewCustomer.css">
+    <link rel="stylesheet" href="assests/css/selectCar.css">
+</head>
+<body>
+<script src="assests/js/bootstrap.js"></script>
+
+<div class="wall">
+
+    <div class="overflow-hidden" id="login">
+        <div class="hero">
+            <a href="index.html"><label id="btnBackToDashBoard" class="backToSelectCar"><< Back to DashBoard</label></a>
+            <div id="main" class="main">
+                <h1>Customer Form</h1>
+                <div class="logBox">
+                    <input id="cusId" class="userName" placeholder="Customer ID">
+                    <input id="cusPassword" type="password" class="password" placeholder="Password">
+                    <button id="btnLoginCustomer" type="button" class="btnLogin">Login</button>
+                    <label id="btnCreateNewAccount" class="createAccount">Create New Account?</label>
+                </div>
+            </div>
+        </div>
+        <div id="createNewAccount">
+            <div id="secondary" class="main2">
+                <h1 class="title">Customer Registetion</h1>
+                <div class="rejBox">
+                    <div class="mb-1">
+                        <label for="customerID" class="form-label">Customer ID</label>
+                        <input type="customerID" class="form-control" id="customerID">
+                        <span class=" text-danger" id="lblCustomerID"></span>
+                    </div>
+                    <div class="mb-1">
+                        <label for="customerName" class="form-label">Customer Name</label>
+                        <input type="customerName" class="form-control" id="customerName">
+                        <span class=" text-danger" id="lblCustomerName"></span>
+
+                    </div>
+                    <div class="mb-1">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email">
+                        <span class=" text-danger" id="lblEmail"></span>
+                    </div>
+                    <div class="mb-1">
+                        <label for="contactNumber" class="form-label">Contact Number</label>
+                        <input type="text" class="form-control" id="contactNumber">
+                        <span class=" text-danger" id="lblNumber"></span>
+                    </div>
+
+                    <div class="mb-1">
+                        <label for="address" class="form-label">Address</label>
+                        <input type="text" class="form-control" id="address">
+                        <span class=" text-danger" id="lblAddress"></span>
+                    </div>
+
+                    <div class="mb-1">
+                        <label for="drivingLicenseNumber" class="form-label">Driving License Number</label>
+                        <input type="text" class="form-control" id="drivingLicenseNumber">
+                        <span class=" text-danger" id="lblDrivingLicenseNumber"></span>
+                    </div>
+
+                    <div class="mb-1">
+                        <label for="drivenLicense" class="form-label">Photo Of Driving License</label>
+                        <input class="form-control form-control-sm" id="drivenLicense" type="file">
+                    </div>
+
+                    <div class="mb-1">
+                        <label for="nicNumber" class="form-label">NIC Number</label>
+                        <input type="text" class="form-control" id="nicNumber">
+                        <span class=" text-danger" id="lblNicNumber"></span>
+                    </div>
+
+                    <div class="mb-1">
+                        <label for="nic" class="form-label">Photo Of NIC</label>
+                        <input class="form-control form-control-sm" id="nic" type="file">
+                    </div>
+
+                    <div class="mb-1">
+                        <label for="password" class="form-label">New Password</label>
+                        <input type="password" class="form-control" id="password">
+                        <span class=" text-danger" id="lblPassword"></span>
+                    </div>
+
+                    <div class="mb-1  d-grid gap-2 d-md-flex justify-content-md-end">
+                        <button id="btnRegister" type="button" class="btn btn-primary">Register</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="customerForm">
+
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+            <div class="container-fluid">
+                <a class="navbar-brand font fw-bold fs-3 text-danger" href="#">Send Request Fro Your Booking</a>
+            </div>
+            <span class="navbar-nav fw-bold">
+            <input style="text-align: center;border: 1px solid black" id="navBarRqId" class=" mt-2 align-items-end" >
+            <input style="text-align: center;border: 1px solid black" id="navBarCusId" class=" mt-2 align-items-end" readonly>
+            <a id="btnLogout" class="nav-link "href="index.html">LogOut</a>
+    </span>
+        </nav>
+
+
+        <section class="row mt-3 m-1">
+            <section class="col-2">
+                <!--<label for="withDriverOrWithOutDriver" class="control text-white">With Driver Or With Out Driver</label>
+                <input id="withDriverOrWithOutDriver" type="text" class="text-dark">
+                <span class="text-danger" id="lblWithDriverOrWithOutDriver"></span>-->
+                <!-- Example single danger button -->
+                <label for="withDriverOrWithOutDriver" class="control text-white">With Driver Or With Out Driver</label>
+                <select id="withDriverOrWithOutDriver" class="form-select" >
+                    <option>With Driver</option>
+                    <option>Without Driver</option>
+                </select>
+                <span class="text-danger" id="lblWithDriverOrWithOutDriver"></span>-->
+            </section>
+            <section class="col-2">
+                <label for="PickupLocation" class="control text-white">Pickup Location</label>
+                <input id="pickupLocation" type="text" class="input-group">
+                <span class="text-danger" id="lblRqPickupLocation"></span>
+            </section>
+            <section class="col-2">
+                <label for="pickupDate" class="control text-white">Pickup Date</label>
+                <input type="date" class="form-control" id="pickupDate">
+            </section>
+            <section class="col-2">
+                <label for="pickupTime" class="control text-white">Pickup Time</label>
+                <input type="time" class="form-control" id="pickupTime">
+            </section>
+            <section class="col-2">
+                <label for="returnDate" class="control text-white">Return Date</label>
+                <input type="date" class="form-control" id="returnDate">
+            </section>
+            <section class="col-2">
+                <label for="carId" class="control text-white">Car ID</label>
+                <!--<input id="carId" class="form-control">-->
+                <select id="carId" class="form-select" >
+                  <!--  <option>With Driver</option>
+                    <option>Without Driver</option>-->
+                </select>
+                <span class="text-danger" id="lblRqCarId"></span>
+            </section>
+            <section class="col-2">
+                <label for="vehicleType" class="control text-white">Vehicle Type</label>
+                <select id="vehicleType" class="form-select" >
+                    <option>General</option>
+                    <option>Premium</option>
+                    <option>Luxury</option>
+                </select>
+            </section>
+
+        </section>
+
+        <section class="col p-2">
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <button id="btnRequest" class="btn btn-success me-md-2 p-2" type="button">Request</button>
+            </div>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <button id="btnUpdate" class="btn btn-secondary me-md-2 mt-3" type="button">Update</button>
+            </div>
+        </section>
+
+        <table class="table table-bordered table-hover shadow-sm">
+            <thead class="bg-primary text-white">
+            <th>Request ID</th>
+            <th>Customer ID</th>
+            <th>With Driver or WithoutDriver</th>
+            <th>PicUp Date</th>
+            <th>PicUp Location</th>
+            <th>PicUp Time</th>
+            <th>Return Date</th>
+            <th>VehicleType</th>
+            <th>Car ID</th>
+            <th>Driver ID</th>
+            <th>Accept or Rejected</th>
+
+            </thead>
+            <tbody class="bg-secondary fw-bold" id="tblRentalRequest">
+
+            </tbody>
+        </table>
+
+    </div>
+
+    <div id="PlaceOrder">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+            <div class="container-fluid">
+                <a class="navbar-brand font fw-bold fs-3 text-danger" href="#">Place Your Order</a>
+            </div>
+            <span class="navbar-nav fw-bold">
+                <a id="btnLogin" class="nav-link "href="index.html">LogOut</a>
+            </span>
+        </nav>
+
+        <form class="row mx-4 ">
+            <div class="col-auto g-3">
+                <label for="posOrderID" class="control text-white" readonly>Order Id :</label>
+                <input type="text" class="form-control" id="posOrderID" >
+                <span class="control-error" id="lblOrderID"></span>
+            </div>
+        </form>
+
+        <form class="row mx-4 ">
+            <div class="col-auto g-3">
+                <label for="posReqID" class="control text-white" readonly>Req Id :</label>
+                <input type="text" class="form-control" id="posReqID" readonly>
+                <span class="control-error" id="lblReqID"></span>
+            </div>
+
+            <div class="col-auto g-3">
+                <label for="poCusID" class="control text-white" readonly>Cus Id :</label>
+                <input type="text" class="form-control" id="poCusID" placeholder="" readonly>
+                <span class="control-error" id="lblCusID"></span>
+            </div>
+            <div class="col-auto g-3">
+                <label for="poPickUpTime" class="control text-white" >PickUp Time :</label>
+                <input type="time" class="form-control" id="poPickUpTime" readonly>
+            </div>
+
+            <div class="col-auto g-3">
+                <label for="poPickUpDate" class="control text-white" >PickUp Date :</label>
+                <input type="date" class="form-control" id="poPickUpDate" readonly>
+            </div>
+
+            <div class="col-auto g-3">
+                <label for="poPickUpLocation" class="control text-white">PickUp Location :</label>
+                <input type="text" class="form-control" id="poPickUpLocation" placeholder="" readonly>
+                <span class="control-error" id="lblPickUpLocation"></span>
+            </div>
+
+            <div class="col-1 g-3">
+                <label for="poDriverID" class="control text-white">Driver ID :</label>
+                <input type="text" class="form-control" id="poDriverID" placeholder="" readonly>
+            </div>
+
+            <div class="col-1 g-3">
+                <label for="poCarID" class="control text-white" readonly>Car Id :</label>
+                <input type="text" class="form-control" id="poCarID" placeholder="" readonly>
+                <span class="control-error" id="lblCarID"></span>
+            </div>
+
+        </form >
+
+        <section class="row mx-4 mt-3 mx-4 g2 ">
+            <div class="col-auto ">
+                <label for="poContactNumber" class="control text-white">Contact Number :</label>
+                <input type="tel" style="font-weight: bold" class="form-control btn-outline-dark" id="poContactNumber" placeholder="">
+                <span class="text-danger" id="lblContactNumber"></span>
+            </div>
+            <div class="col-auto ">
+                <label for="monthlyOrDaily" class="control text-white">Monthly or Daily :</label>
+                <select id="monthlyOrDaily" class="form-select" >
+                    <option>Monthly</option>
+                    <option>Daily</option>
+                </select>
+            </div>
+
+            <div class="col-auto ">
+                <label for="period" class="control text-white">Period :</label>
+                <input type="text" style="font-weight: bold" class="form-control btn-outline-dark" id="period" placeholder="">
+                <span class="text-danger" id="lblPeriod"></span>
+            </div>
+
+            <div class="col-auto ">
+                <label for="depositMoney" class="control text-white">Deposit Money :</label>
+                <input type="text" style="font-weight: bold" class="form-control btn-outline-dark" id="depositMoney" readonly>
+                <span class="control1" id="lblDepositMoney"></span>
+            </div>
+
+            <div class="col-auto ">
+                <label for="totalBalanceForCar" class="control text-white">Total balance for Car :</label>
+                <input type="text" style="font-weight: bold" class="form-control btn-outline-dark" id="totalBalanceForCar" readonly>
+                <span class="control1" id="lblTotalBalanceForCar"></span>
+            </div>
+        </section>
+
+
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end mt-3 mb-2 mx-3">
+            <button id="btnOrderAdd" class="btn btn-warning me-md-2" type="button">Next</button>
+            <button id="btnClear" class="btn btn-info" type="button">Clear</button>
+        </div>
+
+        <hr class="bg-white">
+
+        <table id="tblPlaceOrder" class="table table-bordered table-hover shadow-sm ">
+            <thead class="bg-primary text-white">
+            <th>Order ID</th>
+            <th>Req ID</th>
+            <th>Car ID</th>
+            <th>Driver ID</th>
+            <th>Monthly or Daily</th>
+            <th>Period</th>
+            <th>Deposit Money</th>
+            <th>Total Balance For Car</th>
+            <th>Contact Number</th>
+            </thead>
+            <tbody class="bg-secondary text-white" id="PlaceOrderTable">
+
+            </tbody>
+        </table>
+
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end mb-2 mx-2">
+            <button id="btnPlaceOrder" class="btn btn-success me-md-2 p-3" type="button">Place Order</button>
+        </div>
+
+    </div>
+
+
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="controller/customerForm.js"></script>
+</body>
+</html>

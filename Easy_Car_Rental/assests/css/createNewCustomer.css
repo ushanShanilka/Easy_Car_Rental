@@ -1,0 +1,97 @@
+body{
+    padding: 0;
+    margin: 0;
+    font-family: "Rajdhani Medium";
+}
+.hero{
+    width: 100vw;
+    height: 130vh;
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0, 0, 0, 0.5)),url("../img/pexels-dominika-roseclay-1252500.jpg");
+    background-position: center;
+    background-size: cover;
+    overflow-x: hidden;
+    position: relative;
+}
+.backToSelectCar{
+    margin: auto;
+    position: absolute;
+    right: 37px;
+    top: 10px;
+    cursor: pointer;
+    border: 2px solid white;
+    padding: 5px;
+    color: white;
+    font-weight: bolder;
+}
+.main{
+    width: 500px;
+    height: 500px;
+    margin: auto;
+    top: 90px;
+    left: 0;
+    right: 0;
+    background-color: white;
+    position: absolute;
+    border-radius: 10px;
+    opacity: 85%;
+}
+.main h1{
+    text-align: center;
+    top: 100px;
+    padding-top: 50px;
+    font-weight: bolder;
+}
+.main input{
+    width: 250px;
+    height: 25px;
+    display: block;
+    border-radius: 5px;
+}
+.logBox{
+    position: absolute;
+    top: 35%;
+    margin-left: 125px;
+}
+.userName{
+    margin-bottom: 25px;
+}
+.password{
+    margin-bottom: 25px;
+}
+.btnLogin{
+    width: 260px;
+    height: 35px;
+    color: white;
+    background-color: #0652DD;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.createAccount{
+    margin: auto;
+    color: #0b5ed7;
+    position: relative;
+    font-size: 15px;
+    top: 10px;
+    left: 60px;
+    cursor: pointer;
+}
+.rejBox{
+    position: absolute;
+    top: 10%;
+    margin-left: 125px;
+}
+.main2{
+    width: 500px;
+    height: 867px;
+    margin: auto;
+    bottom: -179px;
+    left: 0;
+    right: 0;
+    background-color: white;
+    position: absolute;
+    border-radius: 10px;
+    opacity: 85%;
+}
+.title{
+    text-align: center;
+}

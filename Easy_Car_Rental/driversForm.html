@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Drivers_Form</title>
+    <link rel="stylesheet" href="assests/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assests/css/driverLoging.css">
+</head>
+<body>
+
+<div class="overflow-hidden" id="login">
+    <div class="hero">
+        <a href="index.html"><label class="back"><< Back to DashBoard</label></a>
+        <div id="main" class="main">
+            <h1>Driver Login</h1>
+            <div class="logBox">
+                <input id="driverLoginID" class="driverID" placeholder="Driver ID">
+                <input id="driverLoginPassword" class="password" placeholder="Password">
+                <button id="btnLoginDriver" type="button" class="btnLogin">Login</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="driverShedul" >
+    <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+        <div class="container-fluid">
+            <a class="navbar-brand font fw-bold fs-3 text-danger" href="#">Drivers schedule</a>
+        </div>
+        <span class="navbar-nav fw-bolder ">
+            <input id="navBarDriverId" class="m-sm-3" style="text-align: center" readonly>
+        </span>
+        <span class="navbar-nav fw-bold">
+        <a id="btnLogin" class="nav-link "href="index.html">LogOut</a>
+        </span>
+    </nav>
+
+
+    <table class="table table-bordered table-hover shadow-sm">
+        <thead class="bg-primary text-white">
+        <th>Pickup Location</th>
+        <th>Pickup Date</th>
+        <th>Pickup Time</th>
+        <th>Return Date</th>
+        <th>Vehicle Type</th>
+
+        </thead>
+        <tbody id="tblDriverSheduel">
+
+        </tbody>
+    </table>
+
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script rel="script" src="assests/js/bootstrap.bundle.min.js"></script>
+<script src="controller/driverController.js"></script>
+</body>
+</html>

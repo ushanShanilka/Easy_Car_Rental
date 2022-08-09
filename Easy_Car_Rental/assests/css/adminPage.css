@@ -1,0 +1,112 @@
+body{
+    padding: 0;
+    margin: 0;
+    font-family: "Rajdhani Medium";
+}
+.hero{
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0, 0, 0, 0.7)),url("../img/jasper-geys-NyRe1Mj1pm4-unsplash.jpg");
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    display: block;
+    height: 627px;
+    overflow: hidden;
+}
+
+/*.rentalRq{
+    margin-left: 23%;
+}
+.driverManage{
+    margin-left: 43%;
+}
+.calculateIncome{
+    margin-left: 63%;
+}
+.dailySummary{
+    margin-left: 83%;
+}*/
+.topic{
+    text-align: center;
+    color: black;
+    font-size: 16px;
+    cursor: pointer;
+    margin-right: 100px;
+    display: contents;
+}
+.box div{
+    border-radius: 10px;
+    position: absolute;
+    width: 220px;
+    height: 120px;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.1);
+    opacity: 80%;
+    box-shadow: 1px 2px 20px 3px black;
+}
+.box{
+    width: 100%;
+    height: 583px;
+    /* top: 0px; */
+    position: absolute;
+}
+.box div h1{
+    position: absolute;
+    font-size: 18px;
+    margin: auto;
+    top: 35%;
+    text-align: center;
+    font-weight: bold;
+    left: 0;
+    right: 0;
+    color: white;
+}
+.box div h2{
+    position: absolute;
+    font-size: 22px;
+    margin: auto;
+    top: 60%;
+    text-align: center;
+    left: 0;
+    right: 0;
+    color: white;
+}
+.registeredUsers {
+    left: 10%;
+    bottom: 40%;
+    display: block;
+}
+.bookingsForTheDay{
+    left: 40%;
+    bottom: 40%;
+    display: block;
+}
+.reservedCars{
+    left: 70%;
+    bottom: 40%;
+    display: block;
+}
+.bookingsActiveForTheDay{
+    left: 10%;
+    bottom: 10%;
+    display: block;
+}
+.occupiedDrivers{
+    left: 40%;
+    bottom: 10%;
+    display: block;
+}
+.underMaintenance{
+    left: 70%;
+    bottom: 10%;
+    display: block;
+}
+.name{
+    font-size: 18px;
+    right: 0;
+    margin: auto;
+}
+.dashBox{
+    width: 70vw;
+    height: 40vh;
+    margin: auto;
+}

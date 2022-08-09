@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin_Form</title>
+    <link rel="stylesheet" href="assests/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assests/css/adminPage.css" >
+    <link rel="stylesheet" href="assests/css/loginPage.css">
+</head>
+<body>
+
+<div id="login" class="hero1">
+    <div class="main">
+        <h1>Admin Login Form</h1>
+        <div class="logBox">
+            <input id="userName" class="userName" placeholder="User Name">
+            <input id="password" class="password" type="password" placeholder="Password">
+            <button id="btnAdminLogin" type="button" class="btnLogin">Login</button>
+        </div>
+    </div>
+    <a href="index.html"><label class="back"><< Back to DashBoard</label></a>
+</div>
+
+<div style="display: none" id="in">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+        <div class="container-fluid">
+            <a id="navBarAdmin" class="navbar-brand font fw-bold fs-3 text-danger" href="#">Admin DashBoard</a>
+            <a id="navBarManageCar" class="navbar-brand font fw-bold fs-3 text-danger" href="#">Manage Car</a>
+            <a id="navBarRentalRq" class="navbar-brand font fw-bold fs-3 text-danger" href="#">Rental Request</a>
+            <a id="navBarDriverManage" class="navbar-brand font fw-bold fs-3 text-danger" href="#">DriverManage</a>
+            <a id="navBarDriverManageBookingDetails" class="navbar-brand font fw-bold fs-3 text-danger" href="#">Booking Details</a>
+
+            <div class="navbar-nav m-auto" >
+                <a id="btnDefaultPage" class="nav-link fw-bolder"href="#">AdminDashBoard</a>
+                <a id="btnCarManager" class="nav-link fw-bolder"href="#">ManageCar</a>
+                <a id="btnRentalRequest" class="nav-link fw-bolder"href="#">RentalRequest</a>
+                <a id="btnDriverManage" class="nav-link fw-bolder"href="#">DriverManage</a>
+                <a id="btnBookingDetails" class="nav-link fw-bolder"href="#">Booking Details</a>
+                <a id="btnDailySummary" class="nav-link fw-bolder"href="#">DailySummary</a>
+
+            </div>
+            <a id="btnLogout" class="nav-link text-dark"href="index.html">LogOut</a>
+        </div>
+    </nav>
+
+    <div id="defaultPage" class="hero">
+        <div class="box">
+            <div class="registeredUsers">
+                <h1>Registered Users</h1>
+                <h2>23</h2>
+            </div>
+            <div class="bookingsForTheDay">
+                <h1>Bookings For The Day</h1>
+                <h2>12</h2>
+            </div>
+            <div class="reservedCars">
+                <h1>Reserved Cars</h1>
+                <h2>08</h2>
+            </div>
+            <div class="bookingsActiveForTheDay">
+                <h1>Bookings Active For The Day</h1>
+                <h2>05</h2>
+            </div>
+            <div class="occupiedDrivers">
+                <h1>Occupied Drivers</h1>
+                <h2>30</h2>
+            </div>
+            <div class="underMaintenance">
+                <h1>Under Maintenance</h1>
+                <h2>03</h2>
+            </div>
+        </div>
+    </div>
+
+    <div id="manageCar">
+        <section class="container-fluid">
+            <section class="row px-2 ">
+                <div class=" col">
+
+                    <div class="form-floating p-2">
+                        <input type="text" class="form-control" id="carID" placeholder="Car ID">
+                        <label for="carID">Car ID</label>
+                        <span class="text-danger" id="lblCarID"></span>
+                    </div>
+
+                    <div class="form-floating p-2">
+                        <input type="text" class="form-control" id="BrandName" placeholder="EX : Toyota, Suzuki">
+                        <label for="BrandName">Brand Name</label>
+                        <span class="text-danger" id="lblBrandName"></span>
+                    </div>
+
+                    <div class="form-floating p-2">
+                        <input type="text" class="form-control" id="Type" placeholder="EX : Mini, Luxury">
+                        <label for="Type">Car Type</label>
+                        <span class="text-danger" id="lblType"></span>
+                    </div>
+
+                    <div class="form-floating p-2">
+                        <label class="pb-3" >Four images of the car</label>
+                        <div class="form-floating pt-5">
+                            <ul>
+                                <li class="form-floating p-2">
+                                    <div class="mb-1">
+                                        <label for="frontView" class="form-label">Front View</label>
+                                        <input class="form-control form-control-sm" id="frontView" type="file">
+                                    </div>
+                                </li>
+                                <li class="form-floating p-2">
+                                    <div class="mb-1">
+                                        <label for="backView" class="form-label">Back View</label>
+                                        <input class="form-control form-control-sm" id="backView" type="file">
+                                    </div>
+                                </li>
+                                <li class="form-floating p-2">
+                                    <div class="mb-1">
+                                        <label for="sideView" class="form-label">Side View</label>
+                                        <input class="form-control form-control-sm" id="sideView" type="file">
+                                    </div>
+                                </li>
+                                <li class="form-floating p-2">
+                                    <div class="mb-1">
+                                        <label for="interior" class="form-label">Interior</label>
+                                        <input class="form-control form-control-sm" id="interior" type="file">
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="form-floating p-2">
+                        <input type="text" class="form-control" id="NumberOfPassengers" placeholder="Number Of Passengers">
+                        <label for="NumberOfPassengers">Number Of Passengers</label>
+                        <span class="text-danger" id="lblNumberOfPassengers"></span>
+                    </div>
+
+                    <div class="form-floating p-2">
+                        <input type="text" class="form-control" id="TransmissionType" placeholder="EX : Manual, Auto">
+                        <label for="TransmissionType">Transmission Type</label>
+                        <span class="text-danger" id="lblTransmissionType"></span>
+                    </div>
+
+                    <div class="form-floating p-2">
+                        <input type="text" class="form-control" id="FuelType" placeholder="(Ex. Diesel, Petrol)">
+                        <label for="FuelType">Fuel Type</label>
+                        <span class="text-danger" id="lblFuelType"></span>
+                    </div>
+
+                    <div class="form-floating p-2">
+                        <label class="pb-3" for="TransmissionType">Prices for the rent durations.</label>
+                        <div class="form-floating pt-5">
+                            <ul>
+                                <li class="form-floating p-2">
+                                    <input type="text" class="form-control" id="DailyRate" placeholder="Daily Rate RS.">
+                                    <label for="DailyRate">Daily Rate Rs.</label>
+                                    <span class="text-danger" id="lblDailyRate"></span>
+                                </li>
+                                <li class="form-floating p-2">
+                                    <input type="text" class="form-control" id="MonthlyRate" placeholder="Monthly Rate Rs.">
+                                    <label for="MonthlyRate">Monthly Rate Rs.</label>
+                                    <span class="text-danger" id="lblMonthlyRate"></span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="form-floating p-2">
+                        <input type="text" class="form-control" id="FreeMileageForThePriceSndDuration" placeholder="Free mileage for the price and duration">
+                        <label for="FreeMileageForThePriceSndDuration">Free mileage for the price and duration</label>
+                        <span class="text-danger" id="lblFreeMileageForThePriceSndDuration"></span>
+                    </div>
+
+                    <div class="form-floating p-2">
+                        <input type="text" class="form-control" id="PriceForExtraKM" placeholder="Price for extra KM">
+                        <label for="PriceForExtraKM">Price for extra KM</label>
+                        <span class="text-danger" id="lblPriceForExtraKM"></span>
+                    </div>
+
+                    <div class="form-floating p-2">
+                        <input type="text" class="form-control" id="Color" placeholder="Color">
+                        <label for="Color">Color</label>
+                        <span class="text-danger" id="lblColor"></span>
+                    </div>
+
+                </div>
+            </section>
+
+            <section class="col p-2">
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                    <button id="btnSaveCar" class="btn btn-success me-md-2 p-2" type="button">Save</button>
+                    <button id="btnGetAll" class="btn btn-warning me-md-2 p-2" type="button">GetAll</button>
+                    <button id="btnCarUpdate" class="btn btn-info" type="button">Update</button>
+                    <button id="btnDeleteCar" type="button" class="btn btn-danger" type="button">Delete</button>
+                </div>
+            </section>
+
+
+            <table class="table table-bordered table-hover shadow-sm">
+                <thead class="bg-primary text-white">
+                <th>CarId</th>
+                <th>Brand</th>
+                <th>Type</th>
+                <th>FrontView</th>
+                <th>BackView</th>
+                <th>SideView</th>
+                <th>interior</th>
+                <th>passengers</th>
+                <th>TransmissionType</th>
+                <th>FuelType</th>
+                <th>DailyRate</th>
+                <th>MonthlyRate</th>
+                <th>FreeMileage</th>
+                <th>PriceForExtraKM</th>
+                <th>Color</th>
+                </thead>
+                <tbody id="tblCar">
+
+                </tbody>
+            </table>
+
+        </section>
+    </div>
+
+    <div id="rentalRequest">
+
+        <!--<section class="container-fluid">
+
+            <div class="form-floating p-2">
+                <input type="text" class="form-control" id="requestID" placeholder="Request ID">
+                <label for="requestID">Request ID</label>
+                <span class="control-error" id="lblRequestID"></span>
+            </div>
+
+            <div class="form-floating p-2">
+                <input type="text" class="form-control" id="cusId" placeholder="Customer Id">
+                <label for="cusId">Customer Id</label>
+                <span class="control-error" id="lblCusId"></span>
+            </div>
+
+            <div class="form-floating p-2">
+                <input type="text" class="form-control" id="with" placeholder="With Driver or WithoutDriver">
+                <label for="with">With Driver or WithoutDriver</label>
+                <span class="control-error" id="lblWith"></span>
+            </div>
+
+            <div class="form-floating p-2">
+                <input type="text" class="form-control" id="rqDriverId" placeholder="Driver Id">
+                <label for="driverId">Driver Id</label>
+                <span class="control-error" id="lblRqDriverId"></span>
+            </div>
+
+            <div class="form-floating p-2">
+                <input type="text" class="form-control" id="pickUpLocation" placeholder="PickUp Location">
+                <label for="pickUpLocation">PickUp Location</label>
+                <span class="control-error" id="lblpickUpLocation"></span>
+            </div>
+
+            <div class="form-floating p-2">
+                <input type="text" class="form-control" id="picUpDate" placeholder="PicUp Date">
+                <label for="picUpDate">PicUp Date</label>
+                <span class="control-error" id="lblPicUpDate"></span>
+            </div>
+
+            <div class="form-floating p-2">
+                <input type="text" class="form-control" id="picUpTime" placeholder="PicUp Time">
+                <label for="picUpTime">PicUp Time</label>
+                <span class="control-error" id="lblPicUpTime"></span>
+            </div>
+
+            <div class="form-floating p-2">
+                <input type="text" class="form-control" id="returnDate" placeholder="Return Date">
+                <label for="returnDate">Return Date</label>
+                <span class="control-error" id="lblReturnDate"></span>
+            </div>
+
+            <div class="form-floating p-2">
+                <input type="text" class="form-control" id="vehicleType" placeholder="Vehicle Type">
+                <label for="vehicleType">Vehicle Type</label>
+                <span class="control-error" id="lblVehicleType"></span>
+            </div>
+
+            <div class="form-floating p-2">
+                <input type="text" class="form-control" id="RqCarId" placeholder="Car Id">
+                <label for="RqCarId">Car Id</label>
+                <span class="control-error" id="lblRqCarId"></span>
+            </div>
+
+            <div class="form-floating p-2">
+                <input type="text" class="form-control" id="acceptOrRejected" placeholder="Accept Or Rejected">
+                <label for="acceptOrRejected">Accept Or Rejected</label>
+                <span class="control-error" id="lblAcceptOrRejected"></span>
+            </div>
+
+        </section>-->
+
+        <!--<section class="col m-3 p-2">
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <button id="btnLoad" class="btn btn-success me-md-2 p-2" type="button">Load</button>
+                </div>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <button id="btnSend" class="btn btn-success me-md-2 p-2 mt-3" type="button">Send</button>
+            </div>
+        </section>-->
+
+        <table class="table table-bordered table-hover shadow-sm">
+            <thead class="bg-primary text-white">
+            <th>Request ID</th>
+            <th>Customer ID</th>
+            <th>With Driver or WithoutDriver</th>
+            <th>PicUp Date</th>
+            <th>PicUp Location</th>
+            <th>PicUp Time</th>
+            <th>Return Date</th>
+            <th>VehicleType</th>
+            <th>Car ID</th>
+            <th>Driver ID</th>
+            <th>AcceptOrReject</th>
+            <th>Accept</th>
+            <th>Rejected</th>
+
+            </thead>
+            <tbody id="tblRentalRequest">
+
+            </tbody>
+        </table>
+
+        </section>
+    </div>
+
+    <div id="driverManage">
+        <section class="container-fluid">
+            <section class="row px-2 ">
+                <div class=" col">
+
+                    <div class="form-floating p-2">
+                        <input type="text" class="form-control" id="DriverID" placeholder="Driver ID">
+                        <label for="DriverID">Driver ID</label>
+                        <span class="text-danger" id="lblDriverID"></span>
+                    </div>
+
+                    <div class="form-floating p-2">
+                        <input type="text" class="form-control" id="DriverNICNumber" placeholder="Driver NIC Number">
+                        <label for="DriverNICNumber">Driver NIC Number</label>
+                        <span class="text-danger" id="lblDriverNICNumber"></span>
+                    </div>
+
+                    <div class="form-floating p-2">
+                        <input type="text" class="form-control" id="DriverName" placeholder="Driver Name">
+                        <label for="DriverName">Driver Name</label>
+                        <span class="text-danger" id="lblDriverName"></span>
+                    </div>
+
+                    <div class="form-floating p-2">
+                        <input type="text" class="form-control" id="DriverAddress" placeholder="Driver Address">
+                        <label for="DriverAddress">Driver Address</label>
+                        <span class="text-danger" id="lblDriverAddress"></span>
+                    </div>
+
+                    <div class="form-floating p-2">
+                        <input type="text" class="form-control" id="DriverEmail" placeholder="Driver Email">
+                        <label for="DriverEmail">Driver Email</label>
+                        <span class="text-danger" id="lblDriverEmail"></span>
+                    </div>
+
+                    <div class="form-floating p-2">
+                        <input type="text" class="form-control" id="DriverContactNumber" placeholder="Driver Contact Number">
+                        <label for="DriverContactNumber">DriverContactNumber</label>
+                        <span class="text-danger" id="lblDriverContactNumber"></span>
+                    </div>
+
+                    <div class="form-floating p-2">
+                        <input type="password" class="form-control" id="DriverPassword" placeholder="Driver Password">
+                        <label for="DriverPassword">Driver Password</label>
+                        <span class="text-danger" id="lblDriverPassword"></span>
+                    </div>
+                </div>
+
+            </section>
+
+            <section class="col p-2">
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                    <button id="btnSaveDriver" class="btn btn-success me-md-2 p-2" type="button">Save</button>
+                    <button id="btnGetAllDriver" class="btn btn-success me-md-2 p-2" type="button">GetAll</button>
+                    <button id="btnSearchDriver" type="button" class="btn btn-warning" type="button">Search Driver</button>
+                    <button id="btnDriverUpdate" class="btn btn-info" type="button">Update</button>
+                    <button id="btnDeleteDriver" type="button" class="btn btn-danger" type="button">Delete</button>
+                </div>
+            </section>
+
+
+            <table class="table table-bordered table-hover shadow-sm">
+                <thead class="bg-primary text-white">
+                <th>Driver ID</th>
+                <th>Driver NIC Number</th>
+                <th>Driver Name</th>
+                <th>Driver Address</th>
+                <th>Driver Email</th>
+                <th>Driver Contact Number</th>
+                <th>Driver Password</th>
+                </thead>
+                <tbody id="DriverTbl">
+
+                </tbody>
+            </table>
+
+        </section>
+    </div>
+
+    <div id="bookingDetails">
+
+    </div>
+
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script rel="script" src="assests/js/bootstrap.bundle.min.js"></script>
+<script rel="script" src="controller/adminController.js"></script>
+</body>
+</html>
