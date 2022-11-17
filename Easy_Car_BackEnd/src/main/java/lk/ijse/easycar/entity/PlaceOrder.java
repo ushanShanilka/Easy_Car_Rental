@@ -10,6 +10,7 @@ import javax.persistence.*;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+
 public class PlaceOrder {
     @Id
     private String orderID;

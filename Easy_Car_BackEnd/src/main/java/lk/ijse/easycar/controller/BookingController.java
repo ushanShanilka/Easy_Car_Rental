@@ -23,18 +23,17 @@ public class BookingController {
 
     @PostMapping
     public ResponseEntity sendBooking( @RequestBody BookingDTO dto ){
-        System.out.println ("jhbjhvjhv" );
-        if ( dto.getReqId ().trim ().length ()<=0 ){
-            throw new ValidateException ( "Request Id Wenas Karanna epa !" );
-        }else if ( dto.getWithDriverOrWithOutDriver ().trim ().length ()<=0   ){
-            throw new ValidateException ( "Driver Onathe nethethe?" );
-        }else if ( dto.getPickupLocation ().trim ().length ()<=0   ){
-            throw new ValidateException ( "PickUp Location Danna" );
-        }else if ( dto.getPickupDate ().trim ().length ()<=0   ){
-            throw new ValidateException ( "PickUp Date Danna" );
-        }else if ( dto.getPickupTime ().trim ().length ()<=0   ){
-            throw new ValidateException ( "PickUp Time Danna" );
-        }
+//        if ( dto.getReqId ().trim ().length ()<=0 ){
+//            throw new ValidateException ( "Request Id Wenas Karanna epa !" );
+//        }else if ( dto.getWithDriverOrWithOutDriver ().trim ().length ()<=0   ){
+//            throw new ValidateException ( "Driver ?" );
+//        }else if ( dto.getPickupLocation ().trim ().length ()<=0   ){
+//            throw new ValidateException ( "PickUp Location Danna" );
+//        }else if ( dto.getPickupDate ().trim ().length ()<=0   ){
+//            throw new ValidateException ( "PickUp Date Danna" );
+//        }else if ( dto.getPickupTime ().trim ().length ()<=0   ){
+//            throw new ValidateException ( "PickUp Time Danna" );
+//        }
         bookingService.sendBooking ( dto );
         return new ResponseEntity ( new StandardResponse ( "201","Done",dto ), HttpStatus.CREATED );
     }
